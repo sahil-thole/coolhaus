@@ -168,74 +168,35 @@
       width: 100%;
     }
     
-    /* CTA buttons container */
-    .cta-container {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-      align-items: center;
+    /* Instagram icon */
+    .instagram-icon {
       position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      width: 100%;
-    }
-    
-    /* Button base styles */
-    .btn {
-      display: inline-flex;
+      bottom: 2rem;
+      right: 2rem;
+      width: 3rem;
+      height: 3rem;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 50%;
+      display: flex;
       align-items: center;
       justify-content: center;
-      padding: 0.875rem 2rem;
-      border-radius: 0.75rem;
-      font-size: 1.125rem;
-      font-weight: 600;
       text-decoration: none;
       transition: all 0.2s ease;
-      border: none;
-      cursor: pointer;
-      min-width: 200px;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-      letter-spacing: -0.01em;
-      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+      z-index: 20;
     }
     
-    /* Primary button - mint accent */
-    .btn-primary {
-      background: #9be7c4;
-      color: #0f1113;
-      box-shadow: 0 4px 15px rgba(155, 231, 196, 0.3);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    
-    .btn-primary:hover {
+    .instagram-icon:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(155, 231, 196, 0.4);
-      background: #87d4b0;
-    }
-    
-    .btn-primary:focus {
-      outline: 2px solid #9be7c4;
-      outline-offset: 2px;
-    }
-    
-    /* Secondary button - glass effect */
-    .btn-secondary {
-      background: rgba(255, 255, 255, 0.08);
-      color: #f7f7f5;
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(10px);
-    }
-    
-    .btn-secondary:hover {
-      transform: translateY(-1px);
-      background: rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.15);
       border-color: rgba(255, 255, 255, 0.25);
     }
     
-    .btn-secondary:focus {
-      outline: 2px solid #f7f7f5;
-      outline-offset: 2px;
+    .instagram-icon svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      fill: #f7f7f5;
     }
     
     /* Micro-pledge text */
@@ -309,14 +270,6 @@
         position: relative;
         height: 100vh;
       }
-      
-      .cta-container {
-        top: 60%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: auto;
-        flex-direction: row;
-      }
     }
     
     @media (min-width: 768px) {
@@ -328,12 +281,20 @@
         top: 12%;
       }
       
-      .cta-container {
-        top: 45%;
-      }
-      
       .micro-pledge {
         bottom: 4rem;
+      }
+      
+      .instagram-icon {
+        bottom: 3rem;
+        right: 3rem;
+        width: 3.5rem;
+        height: 3.5rem;
+      }
+      
+      .instagram-icon svg {
+        width: 1.75rem;
+        height: 1.75rem;
       }
     }
     
@@ -401,13 +362,6 @@
       <!-- Main heading -->
       <h1 class="hero-title">Log off together.</h1>
       
-      <!-- CTA buttons -->
-      <div class="cta-container">
-        <a href="https://instagram.com/the_cool_table" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-          Join a hangout
-        </a>
-      </div>
-      
       <!-- Micro-pledge -->
       <p class="micro-pledge">
         no doomscroll • no cliques • no pressure
@@ -428,6 +382,17 @@
       -->
       
     </div>
+    
+    <!-- Instagram icon -->
+    <a href="https://www.instagram.com/the.cooltablee?igsh=MWd0MG93MXNtZmozdw==" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="instagram-icon"
+       aria-label="Follow us on Instagram">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+      </svg>
+    </a>
     
     <!-- Optional rotating chip (commented out) -->
     <!--
