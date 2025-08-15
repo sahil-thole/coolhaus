@@ -330,6 +330,27 @@
       outline-offset: 2px;
     }
     
+    /* TCT Logo in top left */
+    .tct-logo {
+      position: absolute;
+      top: 2rem;
+      left: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: #cfcfca;
+      z-index: 20;
+    }
+    
+    @media (min-width: 768px) {
+      .tct-logo {
+        top: 3rem;
+        left: 3rem;
+      }
+    }
+    
     /* Alternative copy variants as CSS comments for easy swapping:
     
     "Pull up a chair. Log off together."
@@ -378,6 +399,12 @@
     
     <!-- Main content -->
     <div class="hero-content">
+      
+      <!-- TCT Logo in top left -->
+      <div class="tct-logo">
+        <div class="mint-dot"></div>
+        <span>the cool table</span>
+      </div>
       
       <!-- Main heading -->
       <h1 class="hero-title">Pull up a chair!</h1>
