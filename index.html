@@ -68,7 +68,7 @@
       height: 100%;
       object-fit: cover;
       z-index: 1;
-      opacity: 0.85;
+      opacity: 0.9;
       /* Subtle film-grain feel */
       filter: contrast(1.05) saturate(0.95);
     }
@@ -345,7 +345,7 @@
       muted 
       loop 
       playsinline 
-      preload="metadata"
+      preload="auto"
       poster="https://raw.githubusercontent.com/sahil-thole/coolhaus/main/assets/table-loop.png"
       aria-hidden="true"
       onloadstart="console.log('✅ Video load started')"
@@ -355,7 +355,9 @@
       onloadedmetadata="console.log('✅ Video metadata loaded')"
       onstalled="console.log('⚠️ Video stalled')"
       onwaiting="console.log('⚠️ Video waiting')"
-      onabort="console.log('❌ Video aborted')">
+      onabort="console.log('❌ Video aborted')"
+      onplay="console.log('✅ Video started playing')"
+      onpause="console.log('⚠️ Video paused')">
       <source src="https://raw.githubusercontent.com/sahil-thole/coolhaus/main/assets/table-loop.mp4" type="video/mp4">
       <source src="https://raw.githubusercontent.com/sahil-thole/coolhaus/main/assets/table-loop.webm" type="video/webm">
       <!-- Fallback image for very old browsers -->
