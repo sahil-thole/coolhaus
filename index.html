@@ -153,11 +153,12 @@
     
     /* Main heading */
     .hero-title {
-      font-size: clamp(2.5rem, 8vw, 4rem);
+      font-size: clamp(3rem, 10vw, 5rem);
       font-weight: 600;
       line-height: 1.2;
       margin-bottom: 1.5rem;
       letter-spacing: -0.02em;
+      text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
     }
     
     /* Subtext */
@@ -187,30 +188,34 @@
       justify-content: center;
       padding: 0.875rem 2rem;
       border-radius: 0.75rem;
-      font-size: 1rem;
-      font-weight: 500;
+      font-size: 1.125rem;
+      font-weight: 600;
       text-decoration: none;
       transition: all 0.2s ease;
       border: none;
       cursor: pointer;
-      min-width: 180px;
+      min-width: 200px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      letter-spacing: -0.01em;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     }
     
     /* Primary button - mint accent */
     .btn-primary {
-      background-color: #9be7c4;
-      color: #0f1113;
-      box-shadow: 0 2px 8px rgba(155, 231, 196, 0.2);
+      background: linear-gradient(135deg, #ff6b6b 0%, #ffa726 100%);
+      color: #ffffff;
+      box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.1);
     }
     
     .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 4px 12px rgba(155, 231, 196, 0.3);
-      background-color: #87d4b0;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+      background: linear-gradient(135deg, #ff5252 0%, #ff9800 100%);
     }
     
     .btn-primary:focus {
-      outline: 2px solid #9be7c4;
+      outline: 2px solid #ff6b6b;
       outline-offset: 2px;
     }
     
@@ -379,27 +384,13 @@
     <!-- Main content -->
     <div class="hero-content">
       
-      <!-- Logo chip -->
-      <div class="logo-chip">
-        <div class="mint-dot" aria-hidden="true"></div>
-        <span>the cool table</span>
-      </div>
-      
       <!-- Main heading -->
-      <h1 class="hero-title">Less scrolling. More soul.</h1>
-      
-      <!-- Subtext -->
-      <p class="hero-subtitle">
-        A small, friendly community for hanging out offline—walks, coffees, game nights, mini adventures.
-      </p>
+      <h1 class="hero-title">Pull up a chair</h1>
       
       <!-- CTA buttons -->
       <div class="cta-container">
         <a href="https://instagram.com/the_cool_table" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-          Join the next hangout
-        </a>
-        <a href="#about" class="btn btn-secondary">
-          What's this?
+          Join a hangout
         </a>
       </div>
       
