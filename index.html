@@ -579,6 +579,43 @@
         gap: 1.5rem;
         padding: 1.5rem;
       }
+      
+      .coolhaus-description {
+        max-width: none;
+        padding: 0 0.5rem;
+      }
+      
+      .coolhaus-description p {
+        margin-bottom: 1rem;
+      }
+      
+      .about-title {
+        font-size: 1.5rem;
+        line-height: 1.4;
+      }
+      
+      .hero-title {
+        font-size: 2rem;
+        white-space: normal;
+        padding: 0 1rem;
+      }
+      
+      .hero-tagline {
+        font-size: 1rem;
+        white-space: normal;
+        padding: 0 1rem;
+        line-height: 1.4;
+      }
+      
+      .navigation-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+      }
+      
+      .nav-separator {
+        display: none;
+      }
     }
     
     .bullet-item {
@@ -590,8 +627,14 @@
     
     @media (max-width: 767px) {
       .bullet-item {
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
+        gap: 0.5rem;
+      }
+      
+      .bullet-dot {
+        margin-top: 0;
       }
     }
     
