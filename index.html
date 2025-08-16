@@ -384,7 +384,10 @@
     .tct-logo img {
       width: 2rem;
       height: 2rem;
-      object-fit: cover;
+      object-fit: contain;
+      max-width: none;
+      width: auto;
+      height: 2rem;
     }
     
     .tct-logo .logo-text {
@@ -400,8 +403,9 @@
       }
       
       .tct-logo img {
-        width: 2.5rem;
+        width: auto;
         height: 2.5rem;
+        max-height: 2.5rem;
       }
     }
     
