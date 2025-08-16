@@ -219,7 +219,7 @@
     }
     
     /* Micro-pledge text */
-    .micro-pledge {
+    .navigation-links {
       position: absolute;
       bottom: 3rem;
       left: 50%;
@@ -228,7 +228,41 @@
       color: #cfcfca;
       font-weight: 400;
       letter-spacing: 0.02em;
-      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      z-index: 20;
+    }
+    
+    .nav-link {
+      color: #cfcfca;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+    
+    .nav-link:hover {
+      color: #9be7c4;
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: #9be7c4;
+      transition: width 0.2s ease;
+    }
+    
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    
+    .nav-separator {
+      color: #cfcfca;
+      opacity: 0.5;
     }
     
     /* Email capture (commented out by default) */
@@ -304,7 +338,7 @@
         top: calc(12% + 5rem);
       }
       
-      .micro-pledge {
+      .navigation-links {
         bottom: 4rem;
       }
       
@@ -432,9 +466,11 @@
       <p class="hero-tagline">The cool table is a no-pressure community doing real things IRL</p>
       
       <!-- Micro-pledge -->
-      <p class="micro-pledge">
-        Less scrolling. More soul.
-      </p>
+      <div class="navigation-links">
+        <a href="https://instagram.com/coolhaus" target="_blank" rel="noopener noreferrer" class="nav-link">Instagram</a>
+        <span class="nav-separator">•</span>
+        <a href="#about" class="nav-link">About Us</a>
+      </div>
       
       <!-- Optional email capture (commented out) -->
       <!--
