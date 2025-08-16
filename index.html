@@ -797,17 +797,9 @@
       preload="auto"
       poster="./assets/table-loop.png"
       aria-hidden="true"
-      onloadstart="console.log('✅ Video load started')"
-      oncanplay="console.log('✅ Video can play')"
-      onerror="console.log('❌ Video error:', event.target.error)"
-      onloadeddata="console.log('✅ Video data loaded')"
-      onloadedmetadata="console.log('✅ Video metadata loaded')"
-      onstalled="console.log('⚠️ Video stalled')"
-      onwaiting="console.log('⚠️ Video waiting')"
-      onabort="console.log('❌ Video aborted')"
-      onplay="console.log('✅ Video started playing')"
-     onpause="console.log('⚠️ Video paused')"
-     onloadeddata="hideLoading()">
+      oncanplay="hideLoading()"
+      onloadeddata="hideLoading()"
+      onerror="hideLoading()">
       <!-- Your local video files -->
       <source src="./assets/Cool-Haus.mp4" type="video/mp4">
       <source src="./assets/table-loop.webm" type="video/webm">
@@ -946,6 +938,12 @@
         }, 500);
       }
     }
+    
+    // Also hide loading after a timeout as fallback
+    setTimeout(hideLoading, 3000);
+    
+    // Hide loading when page is fully loaded as another fallback
+    window.addEventListener('load', hideLoading);
     
     // About Us Modal functionality
     const aboutTrigger = document.getElementById('about-trigger');
